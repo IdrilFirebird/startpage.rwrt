@@ -32,24 +32,24 @@
 
 body {
 	background: #151515;										/* Page background */
-	color: #999;														/* Font color */
+	color: #428bca;														/* Font color */
 	padding: 150px;													/* Padding between link blocks and edge */
 	font-family: "Museo", "Helvetica Neue", sans-serif;	/* Font */
 	text-shadow: rgba(0,0,0,0.6) 1px 1px 0; /* Text Shadow */
 }
 
 a {
-	color: #999;														/* Link Color */
+	color: #428bca;														/* Link Color */
 	font-size: 11px;												/* Link Size */
 	text-decoration: none;									/* Remove underlines */
 }
 
 a:hover {
-	color: #ddd;														/* Link hover color */
+	color: #777;														/* Link hover color */
 }
 
 .block {
-	border-left: 1px solid #999;						/* Left border of link block */
+	border-left: 1px solid #428bca;						/* Left border of link block */
 	float: left;
 	padding: 1em;														/* Padding around link block */
 	width: 140px;														/* Link block width */
@@ -88,16 +88,7 @@ form {
 
 form input {
 	background: #333;												/* Background search box */
-	background: -webkit-gradient(						/*		gradient for webkit */
-		linear,
-		left top,
-		left bottom,
-		from(#222),
-		to(#333));
-	background: -moz-linear-gradient(				/*		gradient for gecko */
-		top,
-		#222,
-		#333);
+	
 	border: 1px solid #444;									/* Border search box */
 	-webkit-box-shadow: rgba(0,0,0,0.2) 0 1px 2px;	/* Shadow search box - webkit */
 	-moz-box-shadow: rgba(0,0,0,0.2) 0 1px 2px;			/* Shadow search box - gecko */
@@ -107,22 +98,10 @@ form input {
 }
 
 form input:first-child {
-	-webkit-border-top-left-radius: 5px;
-	-webkit-border-bottom-left-radius: 5px;
-	-moz-border-radius-topleft: 5px;
-	-moz-border-radius-bottomleft: 5px;
-	border-top-left-radius: 5px;
-	border-bottom-left-radius: 5px;
 	border-right: 0;
 }
 
 form input:last-child {
-	-webkit-border-top-right-radius: 5px;
-	-webkit-border-bottom-right-radius: 5px;
-	-moz-border-radius-topright: 5px;
-	-moz-border-radius-bottomright: 5px;
-	border-top-right-radius: 5px;
-	border-bottom-right-radius: 5px;
 	border-left: 0;
 }
 /* cc BY-NC-SA License :: k3ttc4r :: 2008 :: http://k3ttc4r.deviantart.com */

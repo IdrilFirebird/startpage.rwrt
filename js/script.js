@@ -40,7 +40,7 @@ var settings = {
 	},
 	
 	"search": {
-		"engines": [
+		"engines": [/*
 			["http://www.google.com/search", "q", "Google"],
 			["http://www.google.com/images", "q", "Google Images"],
 			["http://search.yahoo.com/search", "p", "Yahoo"],
@@ -49,7 +49,7 @@ var settings = {
 			["http://dict.leo.org", "search", "leo"],
 			["http://www.flickr.com/search", "q", "flickr"],
 			["http://browse.deviantart.com/", "q", "deviantArt"]
-		],
+		*/],
 		"focusSearch": false
 	},
 	

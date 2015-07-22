@@ -222,34 +222,54 @@ $(document).ready(function() {
 
 	var typed = '';
 	var shortcutArray = Object.keys(shortcuts);
+	var timeoutID;
 		
 	// Check if we typed a keybinding
 	function hasSubstring(element) {
-		var index = typed.indexOf(element);
-		if(index >= 0) {
-			var sliced = typed.slice(index, typed.length);
-			typed = ''; // Clean typed, so that we can watch for the next keybinding
+		// var index = typed.indexOf(element);
+		// if(index >= 0) {
+		if(typed==element) {
+			// var sliced = typed.slice(index, typed.length);
+			
 			if(settings.navigation.newWindow) {
-				window.open(shortcuts[sliced]);
+				window.open(shortcuts[typed]);
 			} else {
-				window.location.replace(shortcuts[sliced]);
+				window.location.replace(shortcuts[typed]);
 			}
+
 		}
+
 	}
 
 	// React on keypress
 	$(window).keypress(function(e) {
 		
+		cleardelayedSiteOpen();
+
+		var ekey = e.charCode
 		// If we're in an input, we don't want to interpret the keypresses
 		$('input').keypress(function(e) {
 			e.stopPropagation();
 		});
 		
 		// Keep track of pressed keys
-		typed = typed + e.key;
+		typed = typed + String.fromCharCode(ekey);
 
 
-		shortcutArray.some(hasSubstring);
+		delayedSiteOpen();
 	});
+
+	function runSiteOpen(){
+		shortcutArray.some(hasSubstring)
+		typed = ''; // Clean typed, so that we can watch for the next keybinding
+	}
+
+	function delayedSiteOpen() {
+		timeoutID = window.setTimeout(runSiteOpen, 1000);
+	}
+
+	function cleardelayedSiteOpen() {
+	  window.clearTimeout(timeoutID);
+	}
 
 });

@@ -152,7 +152,7 @@ $(document).ready(function() {
 		/*  Add HTML code  *\
 		\*=================*/
 		if(settings.navigation.newWindow) {
-			html = html + '<li><a href="' + url + '" target="_blank">' + title + '</a></li>'
+			html = html + '<li><a href="' + url + '" target="_self">' + title + '</a></li>'
 		}
 		else {
 			html = html + '<li><a href="' + url + '">' + title + '</a></li>'
